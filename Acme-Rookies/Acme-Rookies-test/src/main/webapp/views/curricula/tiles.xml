@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 
+ * tiles.xml
+ *
+ * Copyright (C) 2018 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+       
+<tiles-definitions>
+
+<definition name="curricula/edit" extends="master.page">
+		<put-attribute name="title" value="Edit Curricula" />
+		<put-attribute name="body" value="/views/curricula/edit.jsp" />
+	</definition>
+	
+	<definition name="curricula/editForm" extends="master.page">
+		<put-attribute name="title" value="Edit Curricula" />
+		<put-attribute name="body" value="/views/curricula/editForm.jsp" />
+	</definition>
+
+<definition name="curricula/list" extends="master.page">
+		<put-attribute name="title" value="List of Curriculas" />
+		<put-attribute name="body" value="/views/curricula/list.jsp" />
+	</definition>
+
+	<definition name="curricula/show" extends="master.page">
+		<put-attribute name="title" value="Curricula" />
+		<put-attribute name="body" value="/views/curricula/show.jsp" />
+	</definition>
+
+<definition name="curricula/personalData/create" extends="master.page">
+		<put-attribute name="title" value="Edit personal data" />
+		<put-attribute name="body" value="/views/curricula/personaldata.jsp" />
+	</definition>
+
+	<definition name="curricula/positionData/create" extends="master.page">
+		<put-attribute name="title" value="Edit position data" />
+		<put-attribute name="body" value="/views/curricula/positiondata.jsp" />
+	</definition>
+
+	<definition name="curricula/positionData/delete" extends="master.page">
+		<put-attribute name="title" value="Delete position data" />
+		<put-attribute name="body" value="/views/curricula/positiondata.jsp" />
+	</definition>
+
+	<definition name="curricula/educationData/create" extends="master.page">
+		<put-attribute name="title" value="Edit education data" />
+		<put-attribute name="body" value="/views/curricula/educationdata.jsp" />
+	</definition>
+
+	<definition name="curricula/educationData/delete" extends="master.page">
+		<put-attribute name="title" value="Delete education data" />
+		<put-attribute name="body" value="/views/curricula/educationdata.jsp" />
+	</definition>
+
+	<definition name="curricula/miscellaneousData/create" extends="master.page">
+		<put-attribute name="title" value="Edit miscellaneous data" />
+		<put-attribute name="body" value="/views/curricula/miscellaneousdata.jsp" />
+	</definition>
+
+	<definition name="curricula/miscellaneousData/delete" extends="master.page">
+		<put-attribute name="title" value="Delete miscellaneous data" />
+		<put-attribute name="body" value="/views/curricula/miscellaneousdata.jsp" />
+	</definition>
+	
+</tiles-definitions>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+ * PopulateDatabase.xml
+ *
+ * Copyright (C) 2019 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	">
+	
+	<!-- User accounts -->
+
+	<bean id="userAccountAdmin" class="security.UserAccount">
+		<property name="username" value="admin" />
+		<property name="password" value="21232f297a57a5a743894a0e4a801fc3" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="ADMIN" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<!-- ACTORS -->
+
+	<!-- ADMIN -->
+
+	<bean id="admin" class="domain.Admin">
+		<property name="name" value="Lucas" />
+		<property name="surnames" value="El Increíble"/>
+		<property name="VatNumber" value="ASD56780987" />
+		<property name="photo" value="http://www.pinterest.com/asdllasd123.jpg" />
+		<property name="email" value="email@mail.com" />
+		<property name="phone" value="623456789" />
+		<property name="address" value="calle falsa 123" />
+		<property name="isSpammer" value="false" />
+		<property name="isBanned" value="false" />
+		<property name="userAccount" ref="userAccountAdmin" />
+		<property name="creditCard" ref="creditCard1" />
+		<property name="socialProfiles">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+		<!-- CREDIT CARDS -->
+
+	<bean id="creditCard1" class="domain.CreditCard">
+		<property name="holder" value="Elena Candilejo Pérez" />
+		<property name="make" value="VISA" />
+		<property name="number" value="6601122145920192" />
+		<property name="expirationDate" value="2021/03/03 11:30" />
+		<property name="CVV" value="533" />
+	</bean>
+
+	<!-- CONFIGURATION -->
+
+	<bean id="configuration1" class="domain.Configuration">
+		<property name="banner" value="https://i.imgur.com/7b8lu4b.png" />
+		<property name="finderCacheTime" value="1" />
+		<property name="defaultPhoneCode" value="+34" />
+		<property name="finderQueryResults" value="10" />
+		<property name="systemName" value="Acme Rookies" />
+		<property name="vatPercentage" value="0.21" />
+		<property name="sponsorshipFare" value="0.01" />
+		<property name="notificationIsSent" value="false" />
+		<property name="welcomeTextEnglish"
+			value="Welcome to Acme Rookies We are IT hacker is favourite job marketplace!" />
+		<property name="welcomeTextSpanish"
+			value="¡Bienvenidos a Acme Rookies! ¡Somos el mercado de trabajo favorito de los profesionales de las TICs!" />
+		<property name="spamWords">
+			<list>
+				<ref bean="word1" />
+				<ref bean="word2" />
+				<ref bean="word3" />
+				<ref bean="word4" />
+				<ref bean="word5" />
+				<ref bean="word6" />
+			</list>
+		</property>
+	</bean>
+
+
+	<!-- WORDS -->
+	<!-- SPAM WORDS -->
+
+	<bean id="word1" class="domain.Word">
+		<property name="englishName" value="sex" />
+		<property name="spanishName" value="sexo" />
+	</bean>
+
+	<bean id="word2" class="domain.Word">
+		<property name="englishName" value="viagra" />
+		<property name="spanishName" value="viagra" />
+	</bean>
+
+	<bean id="word3" class="domain.Word">
+		<property name="englishName" value="cialis" />
+		<property name="spanishName" value="cialis" />
+	</bean>
+
+	<bean id="word4" class="domain.Word">
+		<property name="englishName" value="one million" />
+		<property name="spanishName" value="un millón" />
+	</bean>
+
+	<bean id="word5" class="domain.Word">
+		<property name="englishName" value="you've been selected" />
+		<property name="spanishName" value="ha sido seleccionado" />
+	</bean>
+
+	<bean id="word6" class="domain.Word">
+		<property name="englishName" value="Nigeria" />
+		<property name="spanishName" value="Nigeria" />
+	</bean>
+
+</beans>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 
+ * tiles.xml
+ *
+ * Copyright (C) 2018 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+       
+<tiles-definitions>
+
+	<definition name="actor/registerRookie" extends="master.page">
+		<put-attribute name="title" value="Create a new rookie" />
+		<put-attribute name="body" value="/views/actor/registerRookie.jsp" />
+	</definition>
+	
+	<definition name="actor/registerCompany" extends="master.page">	
+		<put-attribute name="title" value="Create a new company" />
+		<put-attribute name="body" value="/views/actor/registerCompany.jsp" />
+	</definition>
+	
+	<definition name="actor/registerAdmin" extends="master.page">	
+		<put-attribute name="title" value="Create a new administrator" />
+		<put-attribute name="body" value="/views/actor/registerAdmin.jsp" />
+	</definition>
+	
+	<definition name="actor/registerAuditor" extends="master.page">	
+		<put-attribute name="title" value="Create a new auditor" />
+		<put-attribute name="body" value="/views/actor/registerAuditor.jsp" />
+	</definition>
+	
+	<definition name="actor/registerProvider" extends="master.page">	
+		<put-attribute name="title" value="Create a new provider" />
+		<put-attribute name="body" value="/views/actor/registerProvider.jsp" />
+	</definition>
+	
+	<definition name="actor/show" extends="master.page">	
+		<put-attribute name="title" value="Show profile" />
+		<put-attribute name="body" value="/views/actor/show.jsp" />
+	</definition>
+	
+	<definition name="actor/edit" extends="master.page">	
+		<put-attribute name="title" value="Edit profile" />
+		<put-attribute name="body" value="/views/actor/edit.jsp" />
+	</definition>
+	
+	<definition name="socialProfile/edit" extends="master.page">	
+		<put-attribute name="title" value="Edit social profile" />
+		<put-attribute name="body" value="/views/actor/editSocial.jsp" />
+	</definition>
+	
+	<definition name="actor/personalData" extends="master.page">	
+		<put-attribute name="title" value="Personal Data" />
+		<put-attribute name="body" value="/views/actor/personalData.jsp" />
+	</definition>
+	
+	<definition name="actor/personalData" extends="master.page">	
+		<put-attribute name="title" value="Personal Data" />
+		<put-attribute name="body" value="/views/actor/personalData.jsp" />
+	</definition>
+	
+</tiles-definitions>
